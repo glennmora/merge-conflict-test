@@ -1,0 +1,6 @@
+vpc_cidr_block = "10.0.0.0/16"
+Web_subnet     = "10.0.100.0/24"
+subnet_zone    = "eu-central-1a"
+main_vpc_name  = "Main VPC"
+my_public_ip   = "your-own-IP-address"
+ssh_public_key = "~/.ssh/your-ssh-folder"
