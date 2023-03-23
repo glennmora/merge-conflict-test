@@ -1,4 +1,4 @@
-# Creating a VPC envinroment with internet
+# Creating a VPC environment in AWS by provisioning it with Terraform!
 Hello, everyone. 
 
 In this repository I will be teaching you how to set up a VPC network with AWS. This repository will include an example configuration file that I have already provisioned ahead of time. The VPC will include a router, subnet, security group, and within the security group two EC2 instances. We will configure the security group with inbound traffic. We will also setup a S3 bucket with secrets to keep a separate tfstate file. I will try to explain each concept so you have a thorough understanding at what you're looking at. This repo will contain many files that are tied to the main.tf file. By the end of this you will have successfully created and secured a VPC network!
@@ -60,4 +60,12 @@ In this repository I will be teaching you how to set up a VPC network with AWS. 
 
 ![Screenshot 2023-03-23 104823](https://user-images.githubusercontent.com/108555140/227259332-74d17726-5d10-467d-8809-78aa64fa7ee4.png)
 
-- So at first we create our keypair resource and give it the name *"test_ssh_key"* then we specify where the file is located which we have defined in our *variables.tf*. Next we are creating a instance that will use the latest linux machine. We specify the type of provider so we use *"amazon"*. Then we set to most recent and we need to give it the value of "amzn2-ami-kernel-*-x86_64-gp2"*. The 
+- So at first we create our keypair resource and give it the name *"test_ssh_key"* then we specify where the file is located which we have defined in our *variables.tf*. Next we are creating a instance that will use the latest linux machine. We specify the type of provider so we use *"amazon"*. Then we set to most recent and we need to give it the value of "amzn2-ami-kernel-*-x86_64-gp2"*. The asteric is located in a spot where the ID goes so if a new linux image ID comes out it will always be the latest. Now we make locals block that will provide us with the time and date a resource is created. We use *formatdate* to specifcy the date format.
+
+### Fourth Step
+
+- You've made it this far and now for the meats and potatoes. The virtual machines! So here we will look at the different instances we will create.
+
+![Screenshot 2023-03-23 110309](https://user-images.githubusercontent.com/108555140/227263621-c2b5d407-fdc3-4ee4-8921-939254541716.png)
+
+
