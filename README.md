@@ -1,4 +1,4 @@
-# terraform-repository
+# Creating a VPC envinroment with internet
 Hello, everyone. 
 
 In this repository I will be teaching you how to set up a VPC network with AWS. This repository will include an example configuration file that I have already provisioned ahead of time. The VPC will include a router, subnet, security group, and within the security group two EC2 instances. We will configure the security group with inbound traffic. We will also setup a S3 bucket with secrets to keep a separate tfstate file. I will try to explain each concept so you have a thorough understanding at what you're looking at. This repo will contain many files that are tied to the main.tf file. By the end of this you will have successfully created and secured a VPC network!
@@ -54,4 +54,10 @@ In this repository I will be teaching you how to set up a VPC network with AWS. 
 
 - We name our security group *"default_sec_group"* we make sure it's in the VPC. Then I have an example of what the ingress block would look like if we decide not to use our *variables.tf*. However, in this case to keep it more simple I set all the definitions in our *variables.tf* file for both our ingress and egress rules.
 
+### Third Step
 
+- In this part we will set up our ssh key, first linux instance, and add a local resource to show us the time and date our resource was created!
+
+![Screenshot 2023-03-23 104823](https://user-images.githubusercontent.com/108555140/227259332-74d17726-5d10-467d-8809-78aa64fa7ee4.png)
+
+- So at first we create our keypair resource and give it the name *"test_ssh_key"* then we specify where the file is located which we have defined in our *variables.tf*. Next we are creating a instance that will use the latest linux machine. We specify the type of provider so we use *"amazon"*. Then we set to most recent and we need to give it the value of "amzn2-ami-kernel-*-x86_64-gp2"*. The 
