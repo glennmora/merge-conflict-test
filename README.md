@@ -74,4 +74,16 @@ In this repository I will be teaching you how to set up a VPC network with AWS. 
 
 3. For our third instance resource we name it **redhat-server** and everything is the same we just added a *count* of 3 so three of these type of instances will be spun up. 
 
-4. Last but not least we have our DynamoDB instance. Here we provision a table partition of 10. We also specify the type of engine it will run in this case *mysql* followed by the version *5.7* and the size of the instance *db.t3.micro*. We give it a name *mydb* set a username and password. Then we give it a paramater group name and 
+4. Last but not least we have our DynamoDB instance. Here we provision a table partition of 10. We also specify the type of engine it will run in this case *mysql* followed by the version *5.7* and the size of the instance *db.t3.micro*. We give it a name *mydb* set a username and password. Then we give it a paramater group name and *skip_final_snapshot* set to true. That way a snapshot of your DB instance is not taken before the DB is deleted.
+
+### You're done!
+
+- You've made it and now you run the following commands to set up the environment
+
+* **terraform init**
+* **terraform plan** (To view what we are creating)
+* **terraform apply -auto-approve**
+
+### Clean up
+
+* **terraform destroy -auto-approve**
