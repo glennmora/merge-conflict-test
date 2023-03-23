@@ -5,10 +5,10 @@ In this repository I will be teaching you how to set up a VPC network with AWS. 
 
 ### Tools used: 
 * **Terraform** 
-* **Visual Studio Code
-* **AWS
-* **S3 bucket
-* **DynamoDB
+* **Visual Studio Code**
+* **AWS**
+* **S3 bucket**
+* **DynamoDB**
 
 ### Imagery
 
