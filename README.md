@@ -50,4 +50,8 @@ In this repository I will be teaching you how to set up a VPC network with AWS. 
 
 ![Screenshot 2023-03-23 074508](https://user-images.githubusercontent.com/108555140/227209141-65da9345-a6ca-427c-9c31-0d08c9f3cd4c.png)
 
-- 
+- We first specify the type of resource we will be using in this case is *"aws_default_route_table"* then we give it a name *"main_vpc_default_rt"*. Then we give it a id using our vpc and route table resource. Then we set up the cidr block and use our gate *aws_internet_gateway.my_web_igw.id*. Finally we tag it and create our security group.
+
+- We name our security group *"default_sec_group"* we make sure it's in the VPC. Then I have an example of what the ingress block would look like if we decide not to use our *variables.tf*. However, in this case to keep it more simple I set all the definitions in our *variables.tf* file for both our ingress and egress rules.
+
+
