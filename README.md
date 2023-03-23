@@ -44,4 +44,10 @@ In this repository I will be teaching you how to set up a VPC network with AWS. 
 
 - We then create our aws subnet named *web* give it a vpc id corresponding to our vpc we just created *aws_vpc.main* . Our cidr block and availability zone are both defined in our *variables.tf*. Then we finally give it a tag and move to our internet gateway.
 
+- Now with our vpc and subnet set in place we can create our internet gateway. We name it *my_web_igw* we give it a vpc id. give a tag name and version which is described in our *locals.tf*.
+
+2. We have successfully provisioned the main components of our VPC now we will take a look at configuring our route table and security group!
+
+![Screenshot 2023-03-23 074508](https://user-images.githubusercontent.com/108555140/227209141-65da9345-a6ca-427c-9c31-0d08c9f3cd4c.png)
+
 - 
