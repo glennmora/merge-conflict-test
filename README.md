@@ -70,4 +70,8 @@ In this repository I will be teaching you how to set up a VPC network with AWS. 
 
 1. The first VM we create we name it **"my_vm"** we will specify the ami, the type of instance in this case **"t2.micro"**, subnet id, our security, we associate a public ip. You can also set this to false if you don't want it to have internet access. We then give it the SSH key name, and we make a user where we specify where we are going to run a script.
 
-2. Our second instance we will name it **server**
+2. Our second instance we will name it **server** everything else should be the same as before for the exception that we added a *count* of 1 to this one. We could specify more if you need to so this comes in handy.
+
+3. For our third instance resource we name it **redhat-server** and everything is the same we just added a *count* of 3 so three of these type of instances will be spun up. 
+
+4. Last but not least we have our DynamoDB instance. Here we provision a table partition of 10. We also specify the type of engine it will run in this case *mysql* followed by the version *5.7* and the size of the instance *db.t3.micro*. We give it a name *mydb* set a username and password. Then we give it a paramater group name and 
