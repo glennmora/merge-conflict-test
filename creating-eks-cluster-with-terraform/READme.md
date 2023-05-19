@@ -37,4 +37,9 @@
 ![Screenshot 2023-05-18 201817](https://github.com/glennmora/terraform-repository/assets/108555140/750f6c50-8a06-4b71-890f-3c79616424ea)
 
 ## Why is this project useful?
-1. Great question! This project is very useful actually because here we are learning how to use Terraform to create a vpc. However, in most real life scenerious Terraform is often use as a IaC(Infrastructure as Code) tool that has gain popularity because is cloud agnostic. This means it compatible with multiple cloud providers instead of being exclusive to one. Now with a Terraform file you can easily create multiple EC2 instances or VMs in the matter of seconds. Terraform files are reusable. So if you ever need to use it again you can refer
+1. Great question! This project is very useful actually because here we are learning how to use Terraform to create a vpc. However, in most real life scenerious Terraform is often use as a IaC(Infrastructure as Code) tool that has gain popularity because is cloud agnostic. This means it compatible with multiple cloud providers instead of being exclusive to one. Now with a Terraform file you can easily create multiple EC2 instances or VMs in the matter of seconds. Terraform files are reusable. So if you ever need to use it again you can refer back to it.
+
+2. Secondly, now that you know how to use a GitHub repository that contains terraform files to provision a VPC environment. You can use these same skills that you learn to create other resources from official cloud repositories. For example, say you want to provision a EKS environment using a already made AWS template. Say this template uses Terraform to create this resources. Well you can follow the steps that they provide and use them as a shell script within one of your steps in your Jenkins pipeline to create the same resources on your end. 
+
+3. Now there are multiple cloud providers repositories that have already built templates that we can use to create resources. Here is a list of different AWS EKS clusters examples that you can use. This is the official AWS GitHub repository which is constantly being updated: https://github.com/aws-ia/terraform-aws-eks-blueprints
+
